@@ -1,0 +1,323 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+body{
+    background-image: url("../public/moroccan-flower-dark.png");
+    
+}
+ul{
+    margin:0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+    padding:0;
+    margin: 0;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+
+.absolute{
+    position:absolute;
+    z-index: 10;
+}
+.card{
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 4px 8px 0 rgba(253, 253, 253, 0.5), 0 6px 20px 0 rgba(255, 255, 255, 0.5);
+       
+      }
+      
+}
+
+/* NAVBAR*/
+.navbar{
+    &-top{
+        list-style: none;
+        margin:0;
+        padding:0;
+    }
+    &-list{
+        display: flex;
+        list-style-type:none;
+        margin:0;
+        padding:0;
+    }
+    li{
+        padding:5px;
+        cursor: pointer;
+    }
+    &-social{
+        display: flex;
+    }
+    &-firsat{
+        cursor: pointer;
+        border-radius: 3px;
+        background: rgb(210,230,156);
+    }
+    
+  }
+
+  /* MAIN */
+  .main{
+    &-list{
+        cursor: pointer;
+        
+    }
+    .active{
+        background-color: rgb(34, 132, 177);
+        border-color: rgb(34, 132, 177);
+    }
+    &-cards {
+    display: flex;
+    justify-content: center;
+    
+    .card{
+        cursor: pointer;
+        margin: 10px 5px 10px 5px;
+        text-align: center;
+        color:rgb(34, 132, 177);
+        font-weight: bolder;
+        min-width: 12%;
+        
+    }
+    }
+
+  }
+  .main-input-pop{
+    width: 50vw;
+
+  }
+
+  /* URUN LISTESI */
+  .product-card{
+      cursor: pointer;
+
+      
+      .fiyat{
+        color:rgb(34, 132, 177);
+      }
+      
+  }
+
+
+
+
+
+
+
+
+
+ 
+
+
+/* UTILITIES */
+.display-none{
+    display:none;
+}
+.display-true{
+    display:unset;
+}
+.nocursor{
+    cursor:context-menu;
+}
+.noshadow{
+    &:hover{
+        box-shadow: none;
+       
+      }
+}
+.noborder{
+    border:none;
+    border-radius:unset;
+}
+.back-color{
+    &-blue{
+        background-color:rgb(34, 132, 177);
+    }
+    &-white{
+        background-color:#fff;
+    }
+}
+.text-color{
+    &-white{
+        color:#fff;
+    }
+   
+    }
+    .border-color{
+        &-blue{
+           border-color:rgb(34, 132, 177);
+        }
+
+}
+.mobile-category{
+    display: none;
+}
+.markalar-mobile{
+    display: none;
+}
+.mobile-footer{
+    display: none;
+}
+.urun-mobile{
+    display: none;
+}
+.sepet-mobile{
+    display: none;
+}
+.profil-mobile{
+    display: none;
+}
+.uyebilgi-mobile{
+    display: none;
+}
+.siparislerim-mobile{
+    display: none;
+}
+.sipdetay-mobile{
+    display: none;
+}
+.adres-mobile{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+.pc{
+    display: unset;
+}
+.mobile-nav{
+    display: none;
+}
+
+.loaders{
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom:0;
+    height: 100%;
+    width: 100%;
+    background:rgba(183, 232, 245, 0.3);
+    .spinner-border{
+        width: 10rem; 
+        height: 10rem;
+        color:rgb(253, 253, 253);
+    }
+
+}
+/* UTILITIES end */
+
+/* MOBILE */
+
+@media (max-width: 1600px) {
+    .footer2{
+        display: none;
+    }
+  }
+  @media (max-width: 1200px) {
+    .footer1{
+        display: none;
+    }
+    .main-ul{
+        display: none;
+    }
+    .main-category{
+        display: none
+
+    }
+    .mobile-category{
+        
+        display: unset;
+        :hover{
+            cursor: pointer;
+            
+           
+        }
+      
+    }
+    
+  }
+  @media (max-width: 1000px){
+    .urun-mobile{
+        display: unset;
+    }
+    .urun-pc{
+        display: none;
+    }
+  }
+  @media (max-width: 900px) {
+      .mobile{
+          display: unset;
+      }
+    .markalar-pc{
+        display: none;
+    }
+    .markalar-mobile{
+        display: unset;
+    }
+    .mobile-footer{
+        display: unset;
+    }
+    .pc-footer{
+        display: none;
+    }
+    .sepet-mobile{
+        display: unset;
+        
+    }
+    .sepet-pc{
+        display: none;
+    }
+    .profil-mobile{
+        display: unset;
+    }
+    .profil-pc{
+        display: none;
+    }
+    .uyebilgi-mobile{
+        display: unset;
+    }
+    .uyebilgi-pc{
+        display: none;
+    }
+    .siparislerim-mobile{
+        display: unset;
+    }
+    .siparislerim-pc{
+        display: none;
+    }
+    .sipdetay-mobile{
+        display: unset;
+    }
+    .sipdetay-pc{
+        display: none;
+    }
+    .adres-mobile{
+        display: unset;
+    }
+    .adres-pc{
+        display: none;
+    }
+    .mobile-margin{
+        margin:0;
+        padding:0;
+    }
+    .mobile-50{
+        width: unset;
+    }
+    .pc{
+        display: none;
+    }
+    .mobile-nav{
+        display: unset;
+    }
+
+  }
+  
+
+
