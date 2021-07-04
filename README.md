@@ -1,6 +1,4 @@
 
-<h1 align="center">Welcome to Eticaret-Sitesi-NextJS-MongoDB 👋</h1>
-
 <h1 align="center">Eticaret-Sitesi-NextJS-MongoDB 👋</h1>
 
 <p>
@@ -9,11 +7,6 @@
 
 > React-NextJS ve MongoDB kullanarak yaptığım fullstack Eticaret web sitesi
 
-
-### ✨ [Demo](https://eticaret-emin.vercel.app/)
-
-## Install
-=======
 # ✨ [Demo](https://eticaret-emin.vercel.app/)
 
 ## Proje içerisindeki mongodb kullanıcıadı/şifre url değişkenlerinin tümünü değiştirmeniz gerekmektedir.
@@ -25,9 +18,6 @@
 npm install
 ```
 
-
-## Usage
-=======
 ## Kullanım
 
 
