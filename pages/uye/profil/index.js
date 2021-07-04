@@ -29,6 +29,12 @@ const Profil=()=>{
     const user_email=useRef();
     const user_tc_no=useRef();
     const user_telefon=useRef();
+    const user_password_m=useRef();
+    const user_password_again_m=useRef();
+    const user_ad_soyad_m=useRef();
+    const user_email_m=useRef();
+    const user_tc_no_m=useRef();
+    const user_telefon_m=useRef();
     const [userDeatils,setUserDetails]=useState({
         type:"",
         ad_soyad:"",
@@ -45,8 +51,12 @@ const Profil=()=>{
     });
     
     const kaydetHandler=async()=>{
+        console.log(user_password.current)
+        console.log(user_password_again.current.value)
         let changed=false;
+      
         if(user_password.current.value!==""||user_password_again.current.value!==""){
+            
             if(user_password.current.value===user_password_again.current.value && user_password.current.value.length>6){
 
                 console.log("password_change")
@@ -227,88 +237,18 @@ const Profil=()=>{
         <div className="card container noshadow">
         <div className="card-body d-flex flex-column ">
     <ProfilBar/>
-    <div className="uyebilgi-pc">
-    <div className="card container noshadow">
-        <div className="card-body ">
-            <h1 className="fs-4">Üyelik Bilgilerim</h1>
-            <div className="card mt-3">
-                <div className="card-body ">
-                    <div className="d-flex justify-content-evenly">
-                <ul>
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">Ad Soyad:</span>  <input type="text"  className="form-control" placeholder={userDeatils.ad_soyad} ref={user_ad_soyad}></input></li>
-            
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">T.C No:</span>  <input type="number" className="form-control" placeholder={userDeatils.tc} ref={user_tc_no}></input></li>
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">E-posta:</span>  <input type="mail" className="form-control" placeholder={userDeatils.email} ref={user_email}></input></li>
-                </ul>
-                <ul>
-                <li className="d-flex nowrap align-items-center my-2">
-                <span className="me-2">Cep Telefonu:</span>  
-                <div className="input-group">
-                <span className="input-group-text" id="phone2"><img src="/turkey.png"></img></span>
-                <input type="number" className="form-control" placeholder={userDeatils.telefon} aria-label="phone2" aria-describedby="phone1" ref={user_telefon}></input>
-                </div>
-                </li>
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">Yeni Şifre:</span>  <input type="password" className="form-control" placeholder="" ref={user_password}></input></li>
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">Yeni Şifre Tekrar:</span>  <input type="password" className="form-control" placeholder="" ref={user_password_again}></input></li>
-                
-                </ul>
-                </div>
-                <div className="w-100 d-flex flex-column">
-                <button type="button" onClick={kaydetHandler} className={`btn btn-warning ${loading&&"disabled"}`}>{loading?spinner:"Kaydet"}</button>
-                {durum}
-                </div>
-                </div>
-                
-            </div>
-
+    <div className="card mt-1">
+        <div className="card-body">
+        Profil düzenleme sadece masaüstü site üzerinden yapılmaktadır.
         </div>
     </div>
-    </div>
-
-
-    <div className="uyebilgi-mobile pt-1">
-    <div className="card container noshadow">
-        <div className="card-body ">
-            <h1 className="fs-4">Üyelik Bilgilerim</h1>
-            <div className="card mt-3">
-                <div className="card-body ">
-                    <div className="d-flex justify-content-evenly">
-                <ul>
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">Ad Soyad:</span>  <input type="text"  className="form-control" placeholder={userDeatils.ad_soyad} ref={user_ad_soyad}></input></li>
-            
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">T.C No:</span>  <input type="number" className="form-control" placeholder={userDeatils.tc} ref={user_tc_no}></input></li>
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">E-posta:</span>  <input type="mail" className="form-control" placeholder={userDeatils.email} ref={user_email}></input></li>
-                
-                <li className="d-flex nowrap align-items-center my-2">
-                <span className="me-2">Cep:</span>  
-                <div className="input-group">
-                <span className="input-group-text" id="phone2"><img src="/turkey.png"></img></span>
-                <input type="number" className="form-control" placeholder={userDeatils.telefon} aria-label="phone2" aria-describedby="phone1" ref={user_telefon}></input>
-                </div>
-                </li>
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">Yeni Şifre:</span>  <input type="password" className="form-control" placeholder="" ref={user_password}></input></li>
-                <li className="d-flex nowrap align-items-center my-2"><span className="me-2">Yeni Şifre Tekrar:</span>  <input type="password" className="form-control" placeholder="" ref={user_password_again}></input></li>
-                
-                </ul>
-                </div>
-                <div className="w-100 d-flex flex-column">
-                <button type="button" onClick={kaydetHandler} className={`btn btn-warning ${loading&&"disabled"}`}>{loading?spinner:"Kaydet"}</button>
-                {durum}
-                </div>
-                </div>
-                
-            </div>
-
-        </div>
-    </div>
-    </div>
-
-
+    
+    
 
 
         </div>
     </div>
-    </div>
+    </div> 
     </>
     }
     

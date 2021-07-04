@@ -5,6 +5,7 @@ const Profil=()=>{
     const [adresedit,setAdresedit]=useState(false);
     const [loading,setLoading]=useState(false);
     const user_new_adres=useRef();
+    const user_new_adres_m=useRef();
     const  [userDeatils,setuserDeatils]=useState();
     const loading_mini=<div class="spinner-border spinner-border-sm" role="status"></div>
     useEffect(()=>{
@@ -81,7 +82,7 @@ const Profil=()=>{
       <i className="fas fa-edit"></i> <u onClick={()=>{setAdresedit(true)}}> Adresi Düzenle</u>
       <div className={`form-group ${!adresedit?"display-none":"display-true"}`}>
       <label htmlFor="exampleFormControlTextarea1"></label>
-     <textarea ref={user_new_adres} className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+     <textarea ref={user_new_adres_m} onChange={()=>{user_new_adres.current.value=user_new_adres_m.current.value}} className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
      <u className={`btn ${loading&&"disabled"}`} onClick={adresChangeHandler}><i className="fas fa-save"></i> Kaydet {loading&&loading_mini}</u>
      </div>
      </div>
